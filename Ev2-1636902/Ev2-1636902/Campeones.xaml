@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+    
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ev2_1636902.Campeones">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="estiloBienvenida" TargetType="Label">
+                <Setter Property="TextColor" Value="#FFDAEBA2" />
+                <Setter Property="FontSize" Value="60" />
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="FontAttributes" Value="Italic, Bold"/>
+                <Setter Property="TextDecorations" Value="Underline" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid BackgroundColor="#061C25">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackLayout Grid.Row="0">
+            <Label Text="CAMPEÓN" Style="{StaticResource estiloBienvenida}" />
+        </StackLayout>
+
+        <StackLayout Grid.Row="1">
+            <Frame BackgroundColor="White" CornerRadius="10" Padding="5">
+                <Entry Placeholder="Buscar" BackgroundColor="Transparent" />
+            </Frame>
+        </StackLayout>
+
+        <StackLayout Grid.Row="2">
+            <ScrollView>
+                <Grid x:Name="grid">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                </Grid>
+            </ScrollView>
+        </StackLayout>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ev2_1636902.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <Style x:Key="frameInicio" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="#70000000"/>
+                <Setter Property="Padding" Value="50"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+            
+            <Style x:Key="loginEstilo" TargetType="Entry">
+                <Setter Property="FontSize" Value="24" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="PlaceholderColor" Value="White" />
+            </Style>
+
+            <Style x:Key="loginBoton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#061C25" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+            </Style>
+
+            <Style x:Key="frameLogo" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="VerticalOptions" Value="End"/>
+            </Style>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+  
+        <Image Source="https://images.alphacoders.com/132/1329181.jpeg" Aspect="AspectFill" />
+
+        <Frame Style="{StaticResource frameInicio}">
+            <StackLayout Spacing="20">
+                <Entry x:Name="txtUsuario" Placeholder="Usuario" Style="{StaticResource loginEstilo}" />
+                <Entry x:Name="txtPassword" Placeholder="Contraseña" Style="{StaticResource loginEstilo}" />
+                <Button Text="Login" Clicked="Button_Clicked" Style="{StaticResource loginBoton}" />
+            </StackLayout>
+        </Frame>
+
+        <Frame Style="{StaticResource frameLogo}">
+            <Image Source="https://www.leagueoflegends.com/static/logo-1200-04b3cefafba917c9c571f9244fd28a1e.png" Aspect="AspectFill" />
+        </Frame>
+    </Grid>
+
+</ContentPage>
